@@ -241,5 +241,3 @@ function ($passable) use ($stack, $pipe) {
                 )
             // middleware handle 可以终结 $next($request), 直接返回 response
 ```
-
-…
