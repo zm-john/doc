@@ -244,15 +244,16 @@ function ($passable) use ($stack, $pipe) {
 
 ### 总结
 
-请求到响应过程:  
-实例化 `Application` 并加载基本的 `EventServiceProvider` 和 `RoutingServiceProvider`  
-
-实例化 `App\Http\Kernel`  
-
-provider 处理: 实例化 `config/app.php` 中的 `providers`, 先调用 `provider` 的 `register`方法, 在调用 `provider` 的 `boot`方法  
-
-中间件处理: 实例化 `App\Http\Kernel` 中的 `middleware` 属性  
-
-路由匹配: `Illuminate\Routing\Router` 的 `dispatch` 方法负责匹配路由并返回响应  
-
-请求结束
+> 请求到响应过程:  
+>
+> 实例化 `Application` 并加载基本的 `EventServiceProvider` 和 `RoutingServiceProvider`  
+>
+> 实例化 `App\Http\Kernel`  
+>
+> provider 处理: 实例化 `config/app.php` 中的 `providers`, 先调用 `provider` 的 `register`方法, 在调用 `provider` 的 `boot`方法  
+>
+> 中间件处理: 实例化 `App\Http\Kernel` 中的 `middleware` 属性  
+>
+> 路由匹配: `Illuminate\Routing\Router` 的 `dispatch` 方法负责匹配路由并返回响应  
+>
+> 请求结束
